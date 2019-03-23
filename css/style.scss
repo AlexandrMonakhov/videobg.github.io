@@ -1,0 +1,123 @@
+/* Import _misc */
+@import '_misc/_colors';
+@import '_misc/_fonts';
+@import '_misc/_mixin';
+
+/* Base settings */
+* {
+    box-sizing: border-box;
+}
+html {
+    font-size: 16px;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+/* Main styles */
+
+.header {
+    text-align: center;
+    height: 100vh;
+    padding: 7.125rem 0;
+    background: $primary-bg;
+    color: #ffffff;
+    &-content {
+        display: block;
+        font-size: .875rem;
+        letter-spacing: .3rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 2.5rem;
+    }
+    &-title {
+        font-size: 3.5rem;
+        font-weight: normal;
+        margin-bottom: 3.125rem;
+    }
+    &-subtext {
+        display: block;
+        font-size: 1.5rem;
+        text-transform: capitalize;
+        font-weight: normal;
+        margin-bottom: 5rem;
+    }
+    &-video_icon {
+        margin-bottom: 5.625rem;
+        cursor: pointer;
+    }
+    &-input {
+        margin: -4px;
+        padding: .625rem 2.125rem;
+        border: 1px solid lighten($outline-color,30%);
+    }
+    &-button {
+        background: $highlight-color;
+        margin: -1px;
+        padding: .687rem 2.125rem;
+        border: none;
+        color: #fff;
+        &:after {
+            content:'»';
+            color: #fff;
+            margin-left: .625rem;
+        }
+    }
+    &-info {
+        margin-top: 3.125rem;
+    }
+    &-selection {
+        color: $highlight-color;
+         &:hover {
+             text-decoration: none;
+             color: $highlight-color;
+        } 
+    }
+     &-nav {
+         text-align: center;
+         padding: .625rem 0rem;
+         &_menu {
+             text-transform: uppercase;
+             color: $primary-bg;
+             text-align-last: left;
+             margin-bottom: 0;
+             a {
+                color: $primary-bg;
+                &:hover {
+                    color: $primary-bg;
+                } 
+            }
+             li {
+                display: inline-block;
+                list-style: none;
+                padding: .3125rem 0;
+                margin-right: .6rem;
+            }
+        }
+        &_social {
+            border: {
+                top: none;
+                right: 1px solid lighten($primary-bg, 40%);
+                bottom: none;
+                left: 1px solid lighten($primary-bg, 40%);
+            }
+            i {
+                margin-right: 1.5rem;
+            }
+        }
+    }
+}
+.facebook-icon {
+    margin-left: 1.5rem;
+    color: #3b5998;
+}
+.twitter-icon {
+    color: #00aced;
+}
+.ellipse-icon {
+    font-size: 1.5625rem;
+}
+
+@import '_misc/media';
